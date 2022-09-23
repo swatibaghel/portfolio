@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   <title>portfolio</title>
+<style>
+ header{
+        background-color: black;
+        color:white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:40px;
+        margin-bottom: 2px;
+       }
+       header span{
+        font-size: 20px;
+        margin: 10px;
+       }
+       nav{
+        display :flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(20, 19, 19);
+        color:white;
+        height:800px;
+        width:330px;
+      
+        
+        
+       }
+       li{
+        list-style: none;
+        margin-bottom: 35px;
+       }
+        nav img{
+        border-radius: 90px;
+        border: 8px solid rgb(196, 175, 175);
+       
+        
+       }
+       nav font{
+        font-style: normal;
+        font-weight: bold;
+   
+       }
+       nav span{
+        margin-right: 20px;
+     
+       }
+       nav a{
+        color:white;
+        text-decoration: none;
+       }
+       nav a:hover{
+        color:rgb(147, 147, 221);
+       }
+        a span{
+            margin-right: 9px;
+        }
+        li a {
+            font-size: 17px;
+        }
+    
+        section{
+            color:white;
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            width:100%;
+            height:800px;
+            
+        }
+        main{
+          height: 700px;
+          overflow: auto;
+        }
+
+    
+    #home{
+        display: grid;
+        grid-template-columns: 9fr;
+        text-align: center;
+   
+        height:800px;
+        margin-bottom: 10px;
+       }
+    .resume-img{
+        background-image: url("public/resume/img.jpg");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom:10px;
+        margin-left: -80px;
+        height:800px;
+       
+
+        }
+    h1{
+        color:white;
+        font-size: 50px;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 220px;
+        margin-left: -50px;
+        
+    }
+    h6{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: -50px;
+        color:white;
+        text-shadow: 2px 2px 2px black;
+    }
+   
+
+
+
+
+    #about{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        color:white;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        
+       
+    }
+    u{
+        color:rgb(173, 173, 233);
+        width:2px;
+    }
+    .about-heading{
+        text-shadow: 2px 2px 2px white;
+        text-align: left;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 80px;
+        color:white;
+        
+
+    } 
+    
+    .about-details{
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+        height: 400px;
+        align-items: left;
+        
+    }
+    .about-info h4{
+    color:rgb(65, 65, 179);
+    text-shadow: 1px 1px 1px white;
+    }
+    .about-img{
+        display: grid;
+        grid-template-columns: 2fr;
+        align-items: center;
+        margin-top: -50px;
+    }
+    .about-info{
+        display: grid;
+        grid-template-columns: 7fr;
+      
+        
+    }
+    .info1{
+        display: grid;
+        grid-template-columns: 2.5fr 4.5fr;
+    }
+    
+    span{
+        color:blue;
+        margin: 1px;
+     }
+    .text1{
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:white;
+
+    }
+     .text2{
+        font-size: 15px;
+        color:white;
+        
+    }
+     #skills{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 700px;
+         background-color: black;
+         color:white;
+         margin-bottom: 10px;
+   
+      
+     }
+     .skill-heading{
+        text-shadow: 2px 2px 2px white;
+        text-align: left;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 40px;
+        color:white;
+     }
+     .sub-heading{
+        font-size: 25px;
+        text-align: left;
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        width:500px;
+        margin-bottom: 7px;
+     }
+     dt{
+        position:sticky;
+        top:0px;
+        
+     }
+     
+     .skillbody-details{
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        align-items: left;
+        width:850px;
+        
+     }
+     
+    progress{
+        display: flex;
+        justify-content: space-between;
+        width:270px;
+        height: 30px;
+     }
+    .skillbody-details span{
+        margin-right: 15px;
+        text-align:left;
+        
+    }
+    #resume{
+        
+        height:1100px;
+        padding:10px;
+        background-color: black;
+        color:white;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+  }
+  .education-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px white;
+    text-align: left;
+  }
+  .personal-details{
+    width:100%;
+    height:700px;
+   color:white;
+   margin-bottom: 20px;
+
+    
+  }
+   .personal-details h2{
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    background-color: rgb(49, 189, 207);
+    width:250px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    
+   }
+   .personal-details p,li{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    text-align: left;
+    
+   }
+   .personal-details li{
+
+   text-decoration: none;
+   text-align: left;
+   }
+ 
+
+ 
+ 
+#blogs{
+  height: 1630px;
+  background-color: black;
+  color:white;
+}
+.blog-name{
+  text-shadow: 2px 2px 2px white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+   margin-bottom: 40px;
+   color:white;
+   padding:10px;
+   text-decoration: underline;
+        
+}
+.blog-heading h3{
+  font-size: 30px;
+  font-weight: bold;
+  padding:5px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.blog-heading p{
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.blog-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  padding:10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+
+  
+
+}
+.blog-templates{
+ display: grid;
+ grid-template-columns: 4fr 4fr;
+ width: 400px;
+  margin-right: 50px;
+  height:800px;
+ 
+
+}
+.blog-templates img{
+  border:3px solid grey;
+  box-shadow: 2px 3px 2px gray;
+  height: 300px;
+  width:430px;
+  margin-bottom: 10px;
+  margin: 40px;
+
+}
+.blog-templates figure{
+  margin-bottom: 10px;
+}
+.blog-templates figcaption{
+  text-align: center;
+  font-size: 15px;
+  padding:4px;
+}
+
+#contacts{
+    background-color:black;
+    color:white;
+    margin-top: 20px;
+  }
+  
+
+.contact{
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    height:990px;
+    padding:5px;
+    background-color: black;
+    color:white;
+  }
+  .contact1{
+    display: grid;
+    grid-template-columns: 3fr;
+    margin: 30px;
+    background-color: black;
+    color:white;
+    border:2px solid white;
+    box-shadow: 5px 5px 5px gray;
+    padding:30px;
+    
+  }
+  .contactheading{
+    font-size: 30px;
+    text-shadow: 2px 2px 2px white;
+    padding:5px;
+    text-align: left;
+    
+  }
+  .loc1{
+      border-radius: 50px;
+      font-size: 20px;
+      border: 2px solid aqua;
+      background-color: aqua;
+      height: 20px;
+      width: 40px;
+      margin-right: 2px;
+  }
+  .loc2{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:white;
+  }
+.loc3{
+    margin-left: 23px;
+    font-size: 17px;
+}
+.map{
+    text-align: center;
+}
+.contact2{
+    display: flex;
+    justify-self: center;
+    text-align: left;
+    align-items: center;
+    padding:30px;
+    border:2px solid white;
+    box-shadow:5px 5px 5px gray;
+   
+   
+
+}
+form{
+    width: 450px;
+    height: 550px;
+    align-items: center;
+}
+.contact2 div{
+    margin-bottom: 50px;
+}
+.contact2 label{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+    margin: 10px;
+}
+.contact2 span{
+    color:white;
+}
+.contact2 textarea{
+    align-items: center;
+}
+
+
+
+
+
+  
+
+   
+
+</style>
+<body>
+  <div class="portfolio-template">
+  <header>
+    <span class="bi bi-chevron-left"></span>MyResume<span class="bi bi-chevron-right"></span>
+ </header>
+<section>
+    <nav>
+        <ul> 
+          <li><img src="/public/resume/self-img.jpg" width="180" height="180"></li>
+          <li><font face="arial" size="5" color="white">Swati Baghel</font></li>
+          <li><span class="bi bi-facebook"></span>
+            <span class="bi bi-instagram"></span>
+            <span class="bi bi-linkedin"></span>
+            <span class="bi bi-whatsapp"></span></li>
+          <li><span class="bi bi-house"><a href="#home">Home</a></span></li>
+          <li><span class="bi bi-person"><a href="#about">About</a></span></li>
+          <li><span class="bi bi-file"><a href="#resume">Resume</a></span></li>
+          <li><span class="bi bi-hdd-stack"><a href="#portfolio">Portfolio</a></span></li>
+          <li><span class="bi bi-hdd"><a href="#blogs">Blogs</a></span></li>
+          <li><span class="bi bi-envelope"><a href="#contacts">Contact</a></span></li>
+          </ul>
+      </nav>
+
+       
+      <main>
+    
+
+    <div id="home">
+     <div class="resume-img">
+
+     
+     <h1>Swati Baghel</h1>
+    <h6>Web Developer & Designer</h6>
+    </div>
+    
+     </div>
+  
+
+
+
+
+
+  <div id="about">
+    <dl>
+<dt><div class="about-heading"><font face="arial"  color="white"><u>ABOUT</u></font></div></dt>
+<div class="about-details">
+<div class="about-img">
+    <img src="public/resume/self-img.jpg" width="300" height="300">
+</div>
+<div class="about-info">
+    <h4>UI/UX Designer and Web Developer.</h4>
+    <div class="info1">
+    <span><span class="bi bi-chevron-right"></span><span class="text1">Birthday:</span><span class="text2">29 july 1993</span></span>
+    <span><span class="bi bi-chevron-right"></span><span class="text1">Age:</span><span class="text2">29 </span></span>
+    </div>
+    <div class="info1">
+    <span><span class="bi bi-chevron-right"></span><span class="text1">Phone:</span><span class="text2">+91-7987598091</span></span>
+    <span><span class="bi bi-chevron-right"></span><span class="text1">Email:</span><span class="text2">swatibaghel093@gmail.com</span></span>
+    </div>
+    <div class="info1">
+        <span><span class="bi bi-chevron-right"></span><span class="text1">Language known</span><span class="text2">English & Hindi</span></span>
+        <span><span class="bi bi-chevron-right"></span><span class="text1">city:</span><span class="text2">Seoni,Madhya Pradesh</span></span>
+    </div>
+    <div class="info1">
+       <span><span class="bi bi-chevron-right"></span><span class="text1">Pin-code:</span><span class="text2">480661</span></span>
+    </div>
+  </div>
+ </div>
+ </dl>
+ </div>
+
+
+ <div id="skills">
+    <dl>
+       <dt><div class="skill-heading"><font face="arial"  color="white"><u>SKILLS</u></font></div></dt>
+       
+       <div class="skillbody">
+        <div class="sub-heading"><font face="arial"  color="white">Frontend development</font></div>
+        <div class="skillbody-details">
+        <span>
+        <font face="arial" color="white" size="3">HTML</font>
+        <progress min="1" max="100" value="100" ></progress>
+        </span>
+        <Span>
+        <font face="arial" color="white" size="3">CSS</font>
+        <progress min="1" max="100" value="100" low="0" high="0"></progress>
+        </Span>
+        <span>
+         <font face="arial" color="white" size="3">JAVA SCRIPT</font>
+        <progress min="1" max="100" value="30" ></progress>30% 
+         </Span>
+        </div>
+
+        <br>
+        <div class="skillbody-details">
+        <Span>
+        <font face="arial" color="white" size="3">BOOTSTRAP</font>
+        <progress min="1" max="100" value="100" low="0" high="0"></progress>
+         </Span>
+         <span>
+         <font face="arial" color="white" size="3">jQuery</font>
+        <progress min="1" max="100" value="30" ></progress>30% 
+        </Span>
+         </div>
+        
+
+        <div class="sub-heading"><font face="arial"  color="white">Backend development</font></div>
+        <div class="skillbody-details">
+        <span>
+        <font face="arial" color="white" size="3">MONGO DB [database]</font>
+        <progress min="1" max="100" value="30" ></progress>
+        </span>
+        <Span>
+        <font face="arial" color="white" size="3">NODE JS [server]</font>
+        <progress min="1" max="100" value="30" low="0" high="0"></progress>
+        </Span>
+        <span>
+        <font face="arial" color="white" size="3">Express [Middleware]</font>
+        <progress min="1" max="100" value="30" ></progress>30% 
+         </Span>
+         </div>
+        
+
+          
+        <div class="skillbody-details">
+        <span>
+        <font face="arial" color="white" size="3">REACT JS</font>
+         <progress min="1" max="100" value="30" ></progress>30% 
+        </Span>
+         </div>
+         <div class="skillbody-details">
+         <span>
+        <font face="arial" color="white" size="3">ENGLISH & HINDI TYPING</font>
+        <progress min="1" max="100" value="100" ></progress>
+        </Span>
+         </div>
+   </div>
+     </dl>
+    </div>
+
+
+    <div id="resume">
+        <div class="education-name">
+         <dt><font face="arial" color="white" size="6"><u>RESUME</u></font></dt>
+        </div>
+        <div class="personal-details">
+          <h2>Personal Details</h2>
+          <p>Name:Swati Baghel</p>
+          <p>DOB:29 july 1993</p>
+          <p>Phone:+917987598091</p>
+          <p>City:Seoni,Madhya pradesh</p>
+          <p>Degree:BE Computer Science</p>
+          <p>Email:Swatibaghel093@gmail.com</p>
+      
+        <div class="personal-details">
+          <h2>Academic Information </h2>
+          <p>B.Tech in Computer Science and Engineering ,UIT R.G.P.V Bhopal, R.G.P.V Bhopal in the year 2015 with 72.30%</p>
+          <p>Diploma in Computer Science , Govt. Polytechnic College Seoni ,R.G.P.V Bhopal in the year 2012 with 79.39%</p>
+          <p>Higher Secondary (10th)  , H.P.Agarwal Memo H S School,Tiny Tots ,Seoni, MP Board in the year 2009 with 60%</p>
+        
+        <div class="personal-details">
+          <h2>Technical Skills</h2>
+          <ul>
+         <li>Computer Knowledge  : Basic Computing</li>  
+         <li>Operating System    :  Windows 2000, XP , Windows 7, 8, 10 , MS-Office.</li>  
+         <li>Languages           :  C ,C++,HTML, CSS, BOOTSTRAP.</li>  
+         <li>Software Known          :  MS-Word, Excel, Power-Point.</li>  
+         <li>Typing (CPCT Certificate)    :   English (40 w.p.m) & Hindi (30 w.p.m)</li>  
+         </ul>
+          </div>
+          </div>
+          </div>
+        </div>
+
+
+      
+
+
+        <div id="blogs">
+          <div class="blog-name">
+            <h3><u>BLOGS</u></h3>
+           </div>
+           <div class="blog-heading">
+            <h3>A Blog About software Development</h3>
+            </div>
+            <p>I'm swati and I design websites for different purpose using HTML,CSS ,JAVASCRIPT and bootstrap. I post some simple webpages done by me. I'm taking on freelance work at the time. Went some help building your software?
+
+            </p>
+            <div class="blog-btn">
+            <button class="btn btn-primary w-50" ><a href="#contacts"><h6>HIRE</h6></a></button>
+            </div>
+            <div class="blog-templates">
+              <div>
+                <figure>
+                  <img src="public/resume/Screenshot (1).png">
+                  <figcaption>Netflix Template</figcaption>
+                  </figure>
+             </div>
+             <div>
+                <figure>
+                  <img src="public/resume/Screenshot (2).png">
+                  <figcaption>Naresh-It Template</figcaption>
+                  </figure>
+             </div>
+             <div class="blog-templates">
+             <div>
+                <figure>
+                  <img src="public/resume/Screenshot (3).png">
+                  <figcaption>Shopping Template</figcaption>
+                  </figure>
+             </div>
+             
+             <div>
+                <figure>
+                  <img src="public/resume/Screenshot (4).png">
+                  <figcaption>Amazon signin page</figcaption>
+                  </figure>
+             </div>
+             <div class="blog-templates">
+             <div>
+                <figure>
+                  <img src="public/resume/Screenshot (5).png">
+                  <figcaption>Instagram signin page</figcaption>
+                  </figure>
+             </div>
+           </div>
+           </div>
+           </div>
+           </div>
+
+
+             <div id="contacts">
+            <div class="contactheading"><u>CONTACT</u></div>
+            <div class="contact">
+            <div class="contact1">
+                <div class="location">
+                <span class="bi bi-globe loc1"></span>
+                <span class="loc2">Locaton:</span>
+                <p class="loc3">Seoni,Madhya Pradesh,480661</p>
+                </div>
+                <div class="location">
+                <span class="bi bi-envelope loc1"></span>
+                <span class="loc2">Email:</span>
+                <p class="loc3">swatibaghel093@gmail.com</p>
+                </div>
+                <div>
+                <span class="bi bi-phone loc1"></span>
+                <span class="loc2">Call:</span>
+                <p class="loc3">+91-7987598091</p>
+                </div>
+                <div class="map">
+                <img src="public/resume/map.png"  width="300" height="300">
+               </div>
+            </div>
+            
+
+            <div class="contact2">
+                 <form>
+                    <div>
+                    <span>
+                    <label for="ur-name" class="form-label">Your name</label>
+                    <input type="text" required name="ur-name" class="form-control">
+                    </span>
+                    <span>
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="text" required name="email" class="form-control">
+                   </span>
+                   </div>
+                   <div>
+                    <label for="subject"  class="form-label">Subject</label>
+                    <input type="text"required  name="subject" class="form-control">
+                   </div>
+                   <div>
+                    <label for="textarea" class="form-label">Message</label>
+                    <textarea rows="7" cols="60"></textarea>
+                   </div>
+                   <div>
+                   <button class="btn btn-primary">Send Message</button>
+                   </div>
+                 </form>
+            </div>
+        </div>
+        </div>
+        </main>
+        </section>
+        </div>
+  </body>
+</html>
